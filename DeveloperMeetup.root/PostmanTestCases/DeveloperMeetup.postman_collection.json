@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DeveloperMeetup",
+		"_postman_id": "e2c0f2e4-90f4-07f3-d403-68f074e92d2e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:55852/api/v1/venues",
+			"request": {
+				"url": "http://localhost:55852/api/v1/venues",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"address\": \"House Name, Street, City, Postcode\",\r\n        \"rows\": 10,\r\n        \"rowLabelType\":1,\r\n        \"cols\": 10,\r\n        \"colLabelType\": 0\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:55852/api/v1/events",
+			"request": {
+				"url": "http://localhost:55852/api/v1/events",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Meetup #3\",\r\n        \"startDateTimeUtc\":\"2017-08-29 11:00:00\",\r\n        \"endDateTimeUtc\": \"2017-08-29 11:00:00\",\r\n        \"venueId\": \"902C939F-D3E2-48BF-5822-08D4DB56E58A\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:55852/api/v1/bookings",
+			"request": {
+				"url": "http://localhost:55852/api/v1/bookings",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"emailAddress\": \"email1@email.com\",\r\n        \"seats\": [{\r\n        \t\"key\":\"3D30F920-102F-444F-A4AE-08D4DB5B10A0\",\r\n        \t\"value\":\"email1@email.com\"\r\n        },\r\n        {\r\n        \t\"key\":\"C7046996-5547-4AED-A4B6-08D4DB5B10A0\",\r\n        \t\"value\":\"email2@email.com\"\r\n        }],\r\n        \"eventId\": \"3DEE87A9-05E4-4E51-4F84-08D4DB5B1099\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

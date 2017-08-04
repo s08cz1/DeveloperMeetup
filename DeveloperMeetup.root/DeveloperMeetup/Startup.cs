@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using DeveloperMeetup.Data;
+using DeveloperMeetup.Data.Interfaces;
+using DeveloperMeetup.Data.Repositories;
 
 namespace DeveloperMeetup
 {
@@ -29,6 +29,16 @@ namespace DeveloperMeetup
         {
             // Add framework services.
             services.AddMvc();
+
+            //Add API versioning
+            services.AddApiVersioning();
+            
+            //Setup db context and repositories
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=DeveloperMeetup.AspNetCore.NewDb;Trusted_Connection=True;";
+            services.AddDbContext<DeveloperMeetupContext>(options => options.UseSqlServer(connection));
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IEventRepository), typeof(EventRepository));
+            services.AddScoped(typeof(ISeatRepository), typeof(SeatRepository));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

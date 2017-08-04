@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeveloperMeetup", "DeveloperMeetup\DeveloperMeetup.csproj", "{9BA40509-615F-48BE-B7BD-DACC15E7C21A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeveloperMeetup", "DeveloperMeetup\DeveloperMeetup.csproj", "{9BA40509-615F-48BE-B7BD-DACC15E7C21A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeveloperMeetup.Test", "DeveloperMeetup.Test\DeveloperMeetup.Test.csproj", "{D78731FD-57D6-4A89-8D20-94F7DE32CBD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostmanTestCases", "PostmanTestCases", "{5D4514BD-2F2B-4198-BEAB-4E4EB4EB08B2}"
+	ProjectSection(SolutionItems) = preProject
+		PostmanTestCases\DeveloperMeetup.postman_collection.json = PostmanTestCases\DeveloperMeetup.postman_collection.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,10 @@ Global
 		{9BA40509-615F-48BE-B7BD-DACC15E7C21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BA40509-615F-48BE-B7BD-DACC15E7C21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BA40509-615F-48BE-B7BD-DACC15E7C21A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78731FD-57D6-4A89-8D20-94F7DE32CBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78731FD-57D6-4A89-8D20-94F7DE32CBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78731FD-57D6-4A89-8D20-94F7DE32CBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78731FD-57D6-4A89-8D20-94F7DE32CBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
